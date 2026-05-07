@@ -1,0 +1,27 @@
+:root {
+  --white: #ffffff;
+  --black: #0a0a0a;
+  --ink: #131313;
+  --line: #d0d0d0;
+  --muted: #5e5e5e;
+  --soft: #f4f4f4;
+  --radius: 14px;
+  --gap: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% -10%, #f0f0f0, #fff 45%),
+    linear-gradient(120deg, #fff 0%, #f7f7f7 40%, #fff 100%);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.03em;
+}

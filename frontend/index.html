@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNA & RNA Sequence Analyzer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/tokens.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/motion.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero reveal">
+    <p class="kicker">CSC 442 · PROJECT 2</p>
+    <h1>DNA & RNA Sequence Analyzer</h1>
+    <p class="sub">From raw nucleotides to protein meaning, with plain-English explanations at every step.</p>
+  </header>
+
+  <main class="page-grid">
+    <section class="panel auth-panel reveal">
+      <h2>Account</h2>
+      <div class="auth-row">
+        <input id="username" placeholder="Username" />
+        <input id="email" placeholder="Email (register only)" />
+        <input id="password" type="password" placeholder="Password" />
+      </div>
+      <div class="button-row">
+        <button id="registerBtn">Register</button>
+        <button id="loginBtn">Login</button>
+        <button id="logoutBtn" class="ghost">Logout</button>
+      </div>
+      <p id="authStatus" class="status"></p>
+    </section>
+
+    <section class="panel input-panel reveal">
+      <h2>1. Sequence Input</h2>
+      <textarea id="sequenceInput" placeholder="Paste DNA or RNA sequence here..."></textarea>
+      <div class="button-row">
+        <input type="file" id="fileInput" accept=".txt,.fasta,.fa" />
+        <button id="analyzeTextBtn">Analyze Text</button>
+      </div>
+      <div id="dropZone" class="drop-zone">Drag and drop a sequence file here</div>
+
+      <div id="strandWrap" class="strand-wrap hidden">
+        <label for="strandType">DNA Strand Type</label>
+        <select id="strandType">
+          <option value="non-template">Non-template (coding/sense)</option>
+          <option value="template">Template (antisense)</option>
+        </select>
+      </div>
+      <p id="inputStatus" class="status"></p>
+    </section>
+
+    <section class="panel history-panel reveal">
+      <h2>History</h2>
+      <button id="refreshHistoryBtn" class="ghost">Refresh History</button>
+      <ul id="historyList" class="history-list"></ul>
+    </section>
+
+    <section class="panel result-panel reveal">
+      <h2>2-7. Analysis Pipeline</h2>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

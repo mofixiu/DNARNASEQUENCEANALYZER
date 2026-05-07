@@ -1,0 +1,51 @@
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+  opacity: 0.15;
+}
+
+.hero {
+  max-width: 1080px;
+  margin: 2rem auto 1rem;
+  padding: 1rem;
+}
+
+.kicker {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.hero h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+.page-grid {
+  max-width: 1080px;
+  margin: 0 auto 4rem;
+  padding: 0 1rem;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.auth-panel { grid-column: span 12; }
+.input-panel { grid-column: span 8; }
+.history-panel { grid-column: span 4; }
+.result-panel { grid-column: span 12; }
+
+@media (max-width: 900px) {
+  .input-panel,
+  .history-panel {
+    grid-column: span 12;
+  }
+}
